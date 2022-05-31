@@ -31,8 +31,6 @@ export default styled.button`
   ${props => props.disabled && css`
     backgroundColor:'darkGray';
     opacity:.5;
-
-
   `};
 
   ${props => props.themedButton && css`

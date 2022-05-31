@@ -116,6 +116,13 @@ class Template extends Component {
     <p className="mb-1">Check on how answers to the guest survey post event, and check out metrics in your backend</p>
     <small className="text-muted">This information will be used for improving the next event</small>
   </div>
+  <div className="list-group-item list-group-item-action flex-column align-items-start">
+  <StyledLink to={'/event-planner-front-end'}>
+  <Button Armoire padding='10px' width='100%' >
+  Start Planning
+  </Button>
+  </StyledLink>
+  </div>
 </div>
         </Col>
           <Col xs={6}>
@@ -130,18 +137,6 @@ class Template extends Component {
         </Div>
         </Col>
         </Row>
-        <Row>
-          <Col xs={12} >
-          <Div display='flex' justifyContent='center' padding='10px'>
-          <StyledLink to={'/event-planner-front-end'}>
-          <Button Armoire padding='10px' width='300px' backgroundColor='red' >
-          Start Planning
-          </Button>
-          </StyledLink>
-          </Div>
-          </Col>
-        </Row>
-
         </Container>
 
     )

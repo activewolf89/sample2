@@ -79,15 +79,15 @@ export default styled.div`
   `};
   ${props => props.borderArmoire && css`
     border: 5px solid indigo;
-    border-color: ${props => props.theme.Armoire};
+    border-color: #520844;
 
 
   `};
   ${props => props.Armoire && css`
-    background-color: ${props => props.theme.Armoire};
-    color: white;
+    background-color: orange;
+    border: 2px solid red;
 
-  `};
+  `}
   ${props => props.underline && css`
     text-decoration: underline;
 

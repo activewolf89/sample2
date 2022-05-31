@@ -128,7 +128,7 @@ export default styled.button`
   ${props => props.Armoire && css`
     opacity: .9;
     color: white;
-    background-color: ${props => props.theme.Armoire};
+    background-color: #520844;
 
   `};
   ${props => props.active && css`

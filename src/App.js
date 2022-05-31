@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './MainBody/M_Homepage'
+import Header from './MainBody/Header'
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,27 +10,15 @@ import {
 } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{position:'relative'}}>
       <header>
 
       </header>
       <body>
       <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
 
+      <Header  />
         <Routes>
           <Route path="/" element = {<Home />} />
         </Routes>

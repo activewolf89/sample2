@@ -10,7 +10,6 @@ import S_Links from './S_Links'
 import Button from 'shared/Button';
 import ScrollToTop from './ScrollToTop';
 
-
 class Class extends Component{
   constructor(props) {
     super(props);

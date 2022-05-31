@@ -84,9 +84,8 @@ export default styled.div`
 
   `};
   ${props => props.Armoire && css`
-    
-    background-color: ${props => props.theme.Armoire};
     color: white;
+    background-color: #520844;
 
   `};
   ${props => props.underline && css`
