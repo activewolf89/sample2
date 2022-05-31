@@ -15,18 +15,15 @@ const StyledDiv = styled(Div)`
 `
 
 const FloatingDiv = styled(Div)`
-  position: absolute
-  top: 93%;
+  position: absolute;
   left: 50%;
-  width: 100%;
-  @media only screen and (min-width: 996px) {
-  width: auto;
-  }
+  top: 90%;
+
   transform: translate(-50%,-50%);
 `
 const FloatingDiv2 = styled(Div)`
 
-  position: absolute
+  position: absolute;
   top: 0%;
   left: 50%;
   width: 100%;
@@ -38,14 +35,11 @@ const FloatingDiv2 = styled(Div)`
 // -----
 const funcC0mp = (props) =>{
   return (
-    <Div  backgroundColor='black' color='pink'  >
+    <Div  backgroundColor='black' position='relative' >
 
-      <StyledDiv  width='100%'  height='400px' mobile={props.WebImage[0]} desktop={props.WebImage[1]} backgroundSize='contain' backgroundPosition='center' backgroundRepeat='no-repeat'>
+      <StyledDiv  width='100%'  height='350px' mobile={props.WebImage[0]} desktop={props.WebImage[1]} backgroundSize='contain' backgroundPosition='center' backgroundRepeat='no-repeat'>
         <FloatingDiv >
-      {
-        !props.noButton &&
           <CallToAction buttonObj={props.buttonObj} text={props.text}/>
-        }
         </FloatingDiv>
         <FloatingDiv2  textAlign='center'>
         {

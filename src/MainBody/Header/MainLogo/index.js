@@ -1,7 +1,7 @@
 import React from 'react';
 import Div from 'shared/Div';
 import StyledLink from 'shared/StyledLink';
-import Armoire from './Armoire/logo.webp'
+import Armoire from './Armoire/logo.jpg'
 import styled from 'styled-components';
 const StyledImg = styled.img`
   display: none;
@@ -30,7 +30,7 @@ const funcC0mp = (props) =>{
 
       <StyledLink to="/" >
         <Div>
-          <StyledImg src={Armoire}  alt="logo for store" />
+          <img src={Armoire}  alt="logo for store" />
         </Div>
       </StyledLink>
     </Div>

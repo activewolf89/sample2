@@ -279,7 +279,7 @@ This includes jeans, sweaters, t-shirts, sneakers, and much more. However, it us
 
       }
       <Div  height='100px' display='flex' justifyContent='center' alignItems='center'>
-      <Button onClick={this.handleGenerate}>Auto Generate Form </Button>
+      <Button width='300px' onClick={this.handleGenerate}>Demo </Button>
       </Div>
       </Col>
       </Row>

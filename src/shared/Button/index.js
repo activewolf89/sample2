@@ -1,7 +1,7 @@
 import styled,{css} from 'styled-components';
 import { prop } from 'styled-tools';
 export default styled.button`
-  background-color: ${prop('backgroundColor','pink')};
+  background-color: ${prop('backgroundColor','')};
   color: ${prop('color','')};
   font-family: ${prop('fontFamily')};
   width: ${prop('width','auto')};

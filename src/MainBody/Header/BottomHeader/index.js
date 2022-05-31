@@ -10,7 +10,7 @@ const StyledNoMPUl = styled(NoMPUl)`
   display: flex;
   justify-content: space-around;
   width: 100vw;
-  max-width: 1500px;
+  max-width: 2000px;
 
   align-items: center;
   cursor: pointer;
