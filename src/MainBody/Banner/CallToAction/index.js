@@ -28,28 +28,15 @@ const StyledHiddenDiv = styled(Div)`
 // -----
 const funcC0mp = (props) =>{
   return (
-    <StyledDiv  >
+    <Div  >
       <StyledLink to={props.buttonObj.url}>
-        <StyledHiddenDiv  opacity='.9'   width='100%' height='100%' position='absolute' textAlign='center' borderRadius='3%'  >
-
-        </StyledHiddenDiv>
-        <Div position='absolute' color='white' textAlign='center' width='100%' >
-
-          <Div padding='10px 0'>
-
-            <ReWords text={props.text} large />
-
-          </Div>
-          <Div textAlign='center' >
-            <Button Armoire   width='100vw' maxWidth='300px'  color='white'>
-              <span style={{fontWeight:'bold', color:'white'}}>
-                {props.buttonObj.text}
-              </span>
-            </Button>
-          </Div>
-        </Div>
+      <Button Armoire  width='100%' color='white'>
+        <span style={{fontWeight:'bold', color:'white'}}>
+          {props.buttonObj.text}
+        </span>
+      </Button>
       </StyledLink>
-    </StyledDiv>
+    </Div>
   )
 }
 funcC0mp.propTypes = {

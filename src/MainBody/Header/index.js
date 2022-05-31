@@ -21,6 +21,8 @@ class Header extends React.Component {
         <Div  textAlign='center' display='flex' flexDirection='column' alignItems='center' >
         <Div backgroundColor='white'>
         <TopHeader
+        toggleUsabilityTest = {this.props.toggleUsabilityTest}
+        post_usability_test = {this.props.post_usability_test}
         />
         </Div>
         <Div Armoire>

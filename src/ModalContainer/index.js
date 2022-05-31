@@ -1,0 +1,60 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import NoMPUl from 'shared/NoMPUl'
+import Li from 'shared/Li'
+import {Row,Col,Container} from 'react-bootstrap'
+import Div from 'shared/Div'
+import Modal from 'react-bootstrap/Modal'
+import Form from 'react-bootstrap/Form'
+import Button from 'shared/Button'
+import P from 'shared/P';
+import Ul from 'shared/Ul';
+const FunctionalComponent = (props) =>{
+
+  return (
+    <div>
+
+    <Modal show onHide={props.handleClose} size='xl'>
+      <Modal.Header closeButton>
+        <Modal.Title>{props.post_usability_test == 0 ? "Going back Version 1":"Going forward Version 2"}</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+      <P>
+      These were changes made to the test application based off the usability report
+      </P>
+        <Div>
+        <h4>User Page Updates</h4>
+        <Ul>
+        <Li>Add price for images</Li>
+        <Li>Sign up or guest option at check out modal</Li>
+        <Li>Display Option of what other people have picked</Li>
+        <Li> Setup Post-event Survey</Li>
+        </Ul>
+        </Div>
+        <Div>
+        <h4>Event Page Updates</h4>
+        <Ul>
+        <Li>Add price for images</Li>
+        <Li>Sign up or guest option at check out modal</Li>
+        <Li>Display Option of what other people have picked</Li>
+        <Li> Setup Post-event Survey</Li>
+        </Ul>
+        </Div>
+      </Modal.Body>
+      <Modal.Footer onClick={props.handleClose}>
+      <Button width='100%' Armoire>Close </Button>
+      </Modal.Footer>
+    </Modal>
+    </div>
+  );
+};
+
+FunctionalComponent.propTypes = {
+  className: PropTypes.string,
+};
+
+FunctionalComponent.defaultProps = {
+  className: null,
+};
+
+export default FunctionalComponent;

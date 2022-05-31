@@ -6,10 +6,10 @@ export default styled.div`
   cursor: ${prop('cursor','')};
   column-count: ${prop('columnCount','')};
   background: ${prop('background','')};
-  font-size: ${prop('fontSize','16px')};
+  font-size: ${prop('fontSize','12px')};
   font-style: ${prop('fontStyle','')};
   @media only screen and (min-width: 996px) {
-    font-size: 26px;
+    font-size: 18px;
   }
   transition: ${prop('transition','')};
   font-weight: ${prop('fontWeight','')};

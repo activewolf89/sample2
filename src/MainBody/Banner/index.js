@@ -6,11 +6,11 @@ import ReWords from './ReWords'
 
 const StyledDiv = styled(Div)`
   position: relative;
-  height: 50vh;
+  height: 400px;
   background-image: url(${props => props.mobile});
   @media only screen and (min-width: 996px) {
     background-image: url(${props => props.desktop});
-  height: 600px
+  height: 300
   }
 `
 
@@ -37,10 +37,8 @@ const funcC0mp = (props) =>{
   return (
     <Div  backgroundColor='black' position='relative' >
 
-      <StyledDiv  width='100%'  height='350px' mobile={props.WebImage[0]} desktop={props.WebImage[1]} backgroundSize='contain' backgroundPosition='center' backgroundRepeat='no-repeat'>
-        <FloatingDiv >
-          <CallToAction buttonObj={props.buttonObj} text={props.text}/>
-        </FloatingDiv>
+      <StyledDiv  width='100%'  mobile={props.WebImage[0]} desktop={props.WebImage[1]} backgroundSize='contain' backgroundPosition='center' backgroundRepeat='no-repeat'>
+
         <FloatingDiv2  textAlign='center'>
         {
         !props.noButton &&
@@ -48,6 +46,7 @@ const funcC0mp = (props) =>{
         }
         </FloatingDiv2>
       </StyledDiv>
+        <CallToAction buttonObj={props.buttonObj} text={props.text}/>
 
     </Div>
   )
