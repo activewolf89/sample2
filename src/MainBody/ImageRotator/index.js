@@ -9,9 +9,13 @@ import styled from 'styled-components'
 const StyledDiv = styled(Div)`
 height: 100px;
 width:100px;
-@media only screen and (min-width: 996px) {
+@media only screen and (min-width: 666px) {
 height: 170px;
 width:170px;
+}
+@media only screen and (min-width: 996px) {
+height: 270px;
+width:270px;
 }
 `
 const FunctionalComponent = (props) =>{
@@ -29,14 +33,16 @@ const FunctionalComponent = (props) =>{
     <Li>
     <Div position='relative'>
 
+
+
+    <StyledDiv position='relative' backgroundImg={props.clothPool[props.selectedStyle][props.refreshNumber][1]} backgroundRepeat='no-repeat' backgroundSize='100%' pr = {props.most_interested_clothing}>
     {
       props.most_interested_clothing &&
       <Div position='absolute' width='100%' top='80%' backgroundColor='maroon' opacity='.8' color='white' backgroundRepeat='no-repeat' fontWeight='bold' textAlign='center'>
       Most clicked on
       </Div>
     }
-
-    <StyledDiv  backgroundImg={props.clothPool[props.selectedStyle][props.refreshNumber][1]} backgroundRepeat='no-repeat' backgroundSize='100%' pr = {props.most_interested_clothing}></StyledDiv>
+    </StyledDiv>
     </Div>
 
     </Li>
