@@ -3,18 +3,24 @@ import Div from 'shared/Div';
 import Table from 'react-bootstrap/Table'
 import styled from 'styled-components';
 import ImageRotator from './ImageRotator'
-import Z0 from './z_0.jpg'
-import Z1 from './z_1.jpg'
-import Z2 from './z_2.jpg'
-import Z3 from './z_3.jpg'
-import Z4 from './z_4.jpg'
-import Z5 from './z_5.jpg'
-import BC0 from './bc_0.jpg'
-import BC1 from './bc_1.jpg'
-import BC2 from './bc_2.jpg'
-import BC3 from './bc_3.jpg'
-import BC4 from './bc_4.jpg'
-import BC5 from './bc_5.jpg'
+import ShowCarousel from './ShowCarousel'
+import SC6 from './sc_6.jpg'
+import SC7 from './sc_7.jpg'
+import SC8 from './sc_8.jpg'
+import SC9 from './sc_9.jpg'
+import SC10 from './sc_10.jpg'
+import SC11 from './sc_11.jpg'
+import SC0 from './sc_0.jpg'
+import SC1 from './sc_1.jpg'
+import SC2 from './sc_2.jpg'
+import SC3 from './sc_3.jpg'
+import SC4 from './sc_4.jpg'
+import SC5 from './sc_5.jpg'
+
+import SC13 from './sc_13.jpg'
+import SC14 from './sc_14.jpg'
+import SC15 from './sc_15.jpg'
+import SC16 from './sc_16.jpg'
 import FontAwesome from 'react-fontawesome'
 import Button from 'shared/Button';
 import ModalContainer from './ModalContainer';
@@ -67,7 +73,8 @@ class Template extends Component {
       whichModal: 'wireframe',
       refreshNumber: 0,
       selectedNumber: false,
-      loginEmail: 'reedd2@uw.edu'
+      loginEmail: 'guest_user@gmail.com',
+      guestCheckout: false
     }
     this.handleToggle = this.handleToggle.bind(this)
     this.handleSwap = this.handleSwap.bind(this)
@@ -75,57 +82,77 @@ class Template extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.handleClose = this.handleClose.bind(this)
     this.handleFind = this.handleFind.bind(this)
+    this.handleGuestCheckout = this.handleGuestCheckout.bind(this)
+  }
+  handleGuestCheckout = function(){
+    this.setState({
+      guestCheckout: !this.state.guestCheckout
+    })
   }
   handleFind = function(){
     var zero = this.state.refreshNumber
     var selectedNumber = this.state.selectedNumber
+    if(selectedNumber > 12){
+      if(selectedNumber == 13){
+        return SC13
+      } else if(selectedNumber == 14){
+        return SC14
+      }
+      else if(selectedNumber == 15){
+        return SC15
+      }
+      else {
+        return SC16
+      }
+    } else {
 
     if(zero == 1){
       if(selectedNumber == 1){
-        return BC0
+        return SC6
       } else if(selectedNumber == 2){
-        return BC1
+        return SC7
 
       }
       else if(selectedNumber == 3){
-        return BC2
+        return SC8
 
       }
       else if(selectedNumber == 4){
-        return BC3
+        return SC9
 
       }
       else if(selectedNumber == 5){
-        return BC4
+        return SC10
       }
 
       else {
-        return BC5
+        return SC11
       }
        //look in b
     } else {
       if(selectedNumber == 1){
-        return Z0
+        return SC0
       } else if(selectedNumber == 2){
-        return Z1
+        return SC1
 
       }
       else if(selectedNumber == 3){
-        return Z2
+        return SC2
 
       }
       else if(selectedNumber == 4){
-        return Z3
+        return SC3
 
       }
       else if(selectedNumber == 5){
-        return Z4
+        return SC4
       }
 
       else {
-        return Z5
+        return SC5
       }
     }
+  }
   }
   handleChange = function(value){
     this.setState({
@@ -156,22 +183,39 @@ class Template extends Component {
 
   render(){
     var clothPool =  {
-      "Business Casual": [[BC0,BC1,BC2,BC3,BC4,BC5],[Z0,Z1,Z2,Z3,Z4,Z5]],
-      "Zoom Casual": [[Z0,Z1,Z2,Z3,Z4,Z5],[BC0,BC1,BC2,BC3,BC4,BC5]],
+      "Business Casual": [[SC6,SC7,SC8,SC9,SC10,SC11],[SC0,SC1,SC2,SC3,SC4,SC5]],
+      "Summer Celebration": [[SC0,SC1,SC2,SC3,SC4,SC5],[SC6,SC7,SC8,SC9,SC10,SC11]],
 
     }
     return (
       <Div >
+      <Div display='flex' alignItems='center' flexDirection='column'>
+
+      <h5 className="mb-1"> <span style={{textDecoration:'underline',  }}>Select Your Clothes</span></h5>
+
+      <span>- or - </span>
+      <p><a href='https://www.armoire.style/closet/brand/brass/aoOAyXXVGl?occasions=occasion_work&seasons=summer&seasons=fall&seasons=winter&seasons=spring' target="_blank">Click here</a> to browse main Armoire site, you may enter event code to get discount </p>
+      </Div>
       {
         this.state.showModal &&
-      <ModalContainer handleClose = {this.handleClose} handleChange = {this.handleChange} loginEmail = {this.state.loginEmail} loginEmail = {this.state.loginEmail} pic = {this.handleFind()}/>
+      <ModalContainer guestCheckout = {this.state.guestCheckout} handleGuestCheckout = {this.handleGuestCheckout} handleClose = {this.handleClose} handleChange = {this.handleChange} loginEmail = {this.state.loginEmail} loginEmail = {this.state.loginEmail} pic = {this.handleFind()}/>
     }
-      <Div padding='10px 20px 5px 0' display='flex' justifyContent='space-between'>
-      <Button onClick={this.handleSwap} width='90px'>
-      <FontAwesome name='recycle' lg />
+      <Div padding='10px 20px 5px 0' display='flex' justifyContent='space-between' cursor='pointer' onClick={this.handleSwap}  >
+      <Div display='flex' justifyContent='center' width='100%' >
+      <Button width='100%'>
+
+      <span style={{cursor:'pointer', paddingRight:'5px'}} > <FontAwesome name='arrow-left' lg /> </span>
+      <span style={{fontWeight:'bold'}}>Rotate Options</span>
+      <span style={{cursor:'pointer',paddingLeft:'5px'}}> <FontAwesome name='arrow-right' lg /> </span>
       </Button>
       </Div>
-      <ImageRotator handleSelect = {this.handleSelect} selectedNumber = {this.state.selectedNumber} selectedStyle={"Zoom Casual"} clothPool = {clothPool} refreshNumber={this.state.refreshNumber} />
+      <Div   >
+      </Div>
+      </Div>
+      <ImageRotator  handleSelect = {this.handleSelect} selectedNumber = {this.state.selectedNumber} selectedStyle={"Summer Celebration"} clothPool = {clothPool} refreshNumber={this.state.refreshNumber} />
+      <ShowCarousel
+handleSelect = {this.handleSelect} selectedNumber = {this.state.selectedNumber}
+       />
         <Div display='flex' justifyContent='center' padding='10px'>
         <Button  disabled = {!this.state.selectedNumber} Armoire = {this.state.selectedNumber}  padding='10px' width='100%' onClick={this.handleToggle}>
         Continue

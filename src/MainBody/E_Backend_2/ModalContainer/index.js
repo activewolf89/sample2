@@ -30,23 +30,23 @@ const FunctionalComponent = (props) =>{
           theme: 'none',
           code: 'Event003',
           link: '/user-front-end/event-003',
-          reference: 'It may be sunny today at our outside garden event business casual meeting, dont forget to bring sunglasses!'
+          reference: 'Business as usual! But casual :)'
 
         },
-        "Zoom Casual":{
-          name:'Vibrant Shirt Zoom Meeting',
+        "Summer Celebration":{
+          name:'2022 Summer Celebration Company Event',
           date: '2022-07-11',
           guests: '16-30',
-          theme: 'Vibrant Tops',
+          theme: 'Summer Celebration',
           code: 'Event004',
           link: '/user-front-end/event-004',
-          reference: 'We will be doing a zoom session catered to welcoming a new member, and thought it would be fun to try out a new experimental Armoire feature that caters to successful events!'
+          reference: 'We will be having an event at an open cocktail garden scene in downtown Seattle to kick off summer - feel free to try out this new clothing suggestion feature we are working with Armoire to see what looks best for you and your style'
         }
       }
     }
      />
     :
-      <VibrantTops selectedStyle="Zoom Casual"  event_detail_obj = {{
+      <VibrantTops selectedStyle="Summer Celebration"  event_detail_obj = {{
           "Business Casual":{
             name:'Business But Casual Event',
             date: '03-03-2022',
@@ -54,17 +54,17 @@ const FunctionalComponent = (props) =>{
             theme: 'none',
             code: 'Event003',
             link: '/user-front-end',
-            reference: 'It may be sunny today at our outside garden event business casual meeting, dont forget to bring sunglasses!'
+            reference: 'Business as usual! But casual :)'
 
           },
-          "Zoom Casual":{
-            name:'Vibrant Shirt Zoom Meeting',
+          "Summer Celebration":{
+            name:'2022 Summer Celebration Company Event',
             date: '2022-07-11',
             guests: '16-30',
-            theme: 'Vibrant Tops',
+            theme: 'Summer Celebration',
             code: 'Event004',
             link: '/user-front-end',
-            reference: 'We will be doing a zoom session catered to welcoming a new member, and thought it would be fun to try out a new experimental Armoire feature that caters to successful events!'
+            reference: 'We will be having an event at an open cocktail garden scene in downtown Seattle to kick off summer - feel free to try out this new clothing suggestion feature we are working with Armoire to see what looks best for you and your style'
           }
         }
       } />

@@ -25,7 +25,6 @@ const FunctionalComponent = (props) =>{
         <Div>
         <h4>User Page Updates</h4>
         <Ul>
-        <Li>Less wordy and more flow-oriented</Li>
         <Li>Add price for images</Li>
         <Li>Sign up or guest option at check out modal</Li>
         <Li>Display Option of what other people have picked</Li>
@@ -36,11 +35,19 @@ const FunctionalComponent = (props) =>{
         <Div>
         <h4>Event Page Updates</h4>
         <Ul>
-        <Li>Less wordy and more flow-oriented</Li>
         <Li>Add current most popular choice so far</Li>
         <Li>Swap the top suggested clothing pool section with the survey and describe what the below pool will do</Li>
         <Li>Replace recycling with left and right arrows</Li>
         <Li>Change the prototype with summer cocktail party</Li>
+        </Ul>
+        </Div>
+        <Div>
+        <h4>All Page Updates</h4>
+        <Ul>
+        <Li>Less wordy and more flow-oriented</Li>
+        <Li>Made font and banner smaller</Li>
+        <Li>Made Mobile friendly in case you need to show this site on mobile</Li>
+        <Li>Added Version 2 and 1 to swap between to show changes</Li>
         </Ul>
         </Div>
       </Modal.Body>

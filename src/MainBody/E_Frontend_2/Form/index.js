@@ -7,6 +7,7 @@ import Button from 'shared/Button'
 import {Row,Col,Container} from 'react-bootstrap'
 import Div from 'shared/Div'
 import StyledLink from 'shared/StyledLink';
+import ClothPool from './ClothPool';
 const FunctionalComponent = (props) =>{
 
   return (
@@ -16,8 +17,9 @@ const FunctionalComponent = (props) =>{
       <Col xs={12}>
       <div class="list-group-item list-group-item-action flex-column align-items-start ">
         <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>1) Event Name</Form.Label>
-        <Form.Control  onChange={(e)=>{props.handleChange('name',e.target.value)}} value={props.eventDetails.name} placeholder="Young Kim's Business Party" />
+        <Form.Label>Event Name</Form.Label>
+
+        <Form.Control  onChange={(e)=>{props.handleChange('name',e.target.value)}} value={props.eventDetails.name} placeholder="Enter" />
         <Form.Text className="text-muted">
         </Form.Text>
         </Form.Group>
@@ -28,49 +30,43 @@ const FunctionalComponent = (props) =>{
       <Col xs={12}>
       <div class="list-group-item list-group-item-action flex-column align-items-start ">
         <div class="d-flex w-100 justify-content-between">
-        <Form.Label>2) Event Type</Form.Label>
+        <Form.Label>Event Theme <small style={{fontStyle:'italic'}}> (this pool will be what we send your users, <span style={{fontWeight:'bold'}}>rotate to change</span>)</small></Form.Label>
         </div>
         <Form.Select aria-label="Event Type"  onChange={(e)=>{props.handleChange('selectedStyle',e.target.value)}} value={props.eventDetails.selectedStyle}>
         <option value="Business Casual">Business Casual</option>
         <option value="Zoom Casual">Zoom Casual</option>
           <option value="Casual">Casual</option>
           <option value="Business Formal">Business Formal</option>
+          <option value="Summer Celebration"> Summer Celebration </option>
         </Form.Select>
+        <Div padding='10px 0 0 0'>
+        <ClothPool
+          clothPool = {props.clothPool}
+          handleRefreshNumber = {props.handleRefreshNumber}
+          eventDetails = {props.eventDetails}
+          refreshNumber = {props.refreshNumber}
+         />
+         </Div>
       </div>
       </Col>
+      </Row>
+      <Row>
       </Row>
       <Row>
       <Col xs={12}>
       <div class="list-group-item list-group-item-action flex-column align-items-start ">
         <div class="d-flex w-100 justify-content-between">
-        <Form.Label>3) Special Theme</Form.Label>
-        </div>
-        <Form.Select aria-label="Event Type" onChange={(e)=>{props.handleChange('selectedTheme',e.target.value)}} value={props.eventDetails.selectedTheme}>
-          <option >Optional</option>
-          <option value="White Clothes Event">White Clothes Event</option>
-          <option value="Black Dress Party">Black Dress Party</option>
-          <option value="Summer Cocktail Celebration">Summer Cocktail Celebration</option>
-          <option value="Vibrant Tops">Vibrant Tops</option>
-        </Form.Select>
-      </div>
-      </Col>
-      </Row>
-      <Row>
-      <Col xs={12}>
-      <div class="list-group-item list-group-item-action flex-column align-items-start ">
-        <div class="d-flex w-100 justify-content-between">
-        <Form.Label>3) What day is your event? <span style={{fontWeight:'bold'}}>*closest event date is 14 calendar days from today </span> </Form.Label>
+        <Form.Label>What day is your event? <span style={{fontStyle:'italic'}}> (closest event date is 14 calendar days from today) </span> </Form.Label>
         </div>
         <input type='date' onChange={(e)=>{props.handleChange('date',e.target.value)}} value={props.eventDetails.date} />
       </div>
       </Col>
       </Row>
       <Row>
-      <Row>
       <Col xs={12}>
       <div class="list-group-item list-group-item-action flex-column align-items-start ">
         <div class="d-flex w-100 justify-content-between">
-        <Form.Label>3) How many will be invited?</Form.Label>
+        <Form.Label>How many will be invited? <span style={{fontStyle:'italic'}}> (this estimate will help track your success) </span></Form.Label>
         </div>
         <Form.Select aria-label="Event Type" onChange={(e)=>{props.handleChange('howManyInvited',e.target.value)}} value={props.eventDetails.howManyInvited}>
           <option value="1">1-5</option>
@@ -83,13 +79,12 @@ const FunctionalComponent = (props) =>{
         </Form.Select>
       </div>
       </Col>
-      </Row>
       <Col xs={12}>
       <div class="list-group-item list-group-item-action flex-column align-items-start " >
       <div class="d-flex w-100 justify-content-between">
-      <Form.Label>4) Event Reminders For Recipients</Form.Label>
+      <Form.Label>Event Reminders For Recipients <span style={{fontStyle:'italic'}}>(This will be a public-facing comment for your guests)</span></Form.Label>
       </div>
-        <textarea onChange={(e)=>{props.handleChange('eventReminders',e.target.value)}} value={props.eventDetails.eventReminders} style={{width:'100%',height:'500px', border:'2px solid gray'}} placeholder="This will be generated on the quick copy for your recipients" />
+        <textarea onChange={(e)=>{props.handleChange('eventReminders',e.target.value)}} value={props.eventDetails.eventReminders} style={{width:'100%',height:'220px', border:'2px solid gray'}} placeholder="Comment for guest" />
 
       </div>
       </Col>

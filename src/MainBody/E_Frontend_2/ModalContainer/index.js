@@ -55,7 +55,7 @@ const FunctionalComponent = (props) =>{
       </Modal.Body>
       <Modal.Footer>
 
-        <Button variant="primary" Armoire onClick={props.handleClose} color='white' width='100%'>
+        <Button variant="primary" Armoire olor='white' width='100%'>
         <StyledLink to='/event-planner-back-end' >
         <span style={{color:'white'}}>
         Continue to Backend

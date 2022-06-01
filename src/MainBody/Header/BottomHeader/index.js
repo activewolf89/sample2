@@ -56,7 +56,7 @@ const FuncC0mp = (props) =>{
           >
               <FontAwesome style={{color:'white'}} size='lg'  name="street-view" />
               <span>
-              Event FrontEnd
+              Event_Front
               </span>
             </Div>
             </StyledLink>
@@ -79,7 +79,7 @@ const FuncC0mp = (props) =>{
           >
               <FontAwesome style={{color:'white'}} size='lg'   name="street-view" />
               <span>
-              Event Backend
+              Event_Back
               </span>
             </Div>
             </StyledLink>
@@ -100,7 +100,7 @@ const FuncC0mp = (props) =>{
           >
               <FontAwesome style={{color:'white'}} size='lg'  name="user" />
               <span>
-              User Frontend
+              User_Front
               </span>
             </Div>
             </StyledLink>
@@ -121,7 +121,7 @@ const FuncC0mp = (props) =>{
           >
               <FontAwesome style={{color:'white'}} size='lg'  name="th-large" />
               <span>
-              Snapshots/Links
+              Demo_Links
               </span>
             </Div>
             </StyledLink>

@@ -4,12 +4,10 @@ import StyledLink from 'shared/StyledLink';
 import Armoire from './Armoire/logo.jpg'
 import styled from 'styled-components';
 const StyledImg = styled.img`
-  display: none;
+  width: 200px;
+  height: 50px;
   @media only screen and (min-width: 666px) {
     width: 100%;
-
-    max-width:300px;
-    display: block;
 
   }
 `
@@ -30,7 +28,7 @@ const funcC0mp = (props) =>{
 
       <StyledLink to="/" >
         <Div>
-          <img src={Armoire}  alt="logo for store" />
+          <StyledImg src={Armoire}  alt="logo for store" />
         </Div>
       </StyledLink>
     </Div>

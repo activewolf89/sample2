@@ -77,7 +77,7 @@ class Template extends Component {
       <ModalContainer handleEdit = {this.handleEdit} showEdit = {this.state.showEdit} whichModal = {this.state.whichModal} handleClose={this.handleToggle} />
     }
     <Div display='flex' flexDirection='column' alignItems='center' flexDirection='column' padding='20px 0'>
-    <Div>Welcome, <span style={{fontWeight:'bold'}}>Reedd2@uw.edu </span> to your backend portal</Div>
+    <Div>Welcome, <span style={{fontWeight:'bold'}}>demo_user@gmail.com </span> to your backend portal</Div>
     <P>Track your past events, who is going to the event, and their survey results on how the event went.</P>
     </Div>
 
@@ -93,9 +93,9 @@ class Template extends Component {
 <tbody>
   <tr>
     <td>1</td>
-    <td>Vibrant Tops</td>
+    <td>2022 Summer Celebration Company Event</td>
     <td style={{color:'green', fontWeight:'bold'}}>07/11/2022</td>
-    <td onClick={()=>{this.handleToggle('vibrant_tops')}}><span style={{color:'blue',cursor:'pointer'}}>Link</span></td>
+    <td onClick={()=>{this.handleToggle('summer_celebration')}}><span style={{color:'blue',cursor:'pointer'}}>Link</span></td>
   </tr>
   <tr>
     <td>2</td>

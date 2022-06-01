@@ -22,17 +22,20 @@ const FunctionalComponent = (props) =>{
       <Div c width='100%' height='170px' border='2px solid white' backgroundImg={props.pic} backgroundSize='100%'></Div>
 
       </div>
-      <div class="list-group-item list-group-item-action flex-column align-items-start ">
+      {
+        !props.guestCheckout &&
+      <div class="list-group-item list-group-item-action flex-column align-items-start " >
         <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>1) Sign-in account</Form.Label>
-        <Form.Control  onChange={(e)=>{props.handleChange(e.target.value)}} value={props.loginEmail} placeholder="Your email" />
+        <Form.Label>Sign-in account or <span style={{textDecoration:'underline',cursor:'pointer',color:'blue'}} onClick={props.handleGuestCheckout}>guest checkout</span></Form.Label>
+        <Form.Control   placeholder="Your email" />
         <Form.Text className="text-muted">
         </Form.Text>
         </Form.Group>
       </div>
+    }
       <div class="list-group-item list-group-item-action flex-column align-items-start ">
         <div class="d-flex w-100 justify-content-between">
-        <Form.Label>2) Size</Form.Label>
+        <Form.Label>Size</Form.Label>
         </div>
         <Form.Select aria-label="Size"  >
         <option >XS</option>
@@ -46,14 +49,14 @@ const FunctionalComponent = (props) =>{
 
       </Modal.Body>
       <Modal.Footer>
-      <StyledLink to='/snapshot-links'>
       <Button  disabled = {props.loginEmail == ''} Armoire = {props.loginEmail !== ''}  padding='10px' width='100%' onClick={props.handleClose}>
+      <StyledLink to='/snapshot-links' >
+      <Div color='white'>
       Checkout
-      </Button>
+      </Div>
       </StyledLink>
-      <P style={{textAlign:'center'}}>
-      Upon completion, you will get an email confirmation with details via your sign-in account email
-      </P>
+      </Button>
+
       </Modal.Footer>
     </Modal>
     </div>

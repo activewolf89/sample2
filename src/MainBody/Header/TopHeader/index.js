@@ -20,12 +20,13 @@ max-width: 2000px;
 `
 
 
+
 // -----
 const funcC0mp = (props) =>{
   return (
     <StyledDiv display='flex' justifyContent='center'   width='100vw' textAlign='center' alignItems='center' borderBottom='1px solid white'>
       <MainLogo/>
-      <Div display='flex' flexDirection='column'>
+      <Div display='flex' flexDirection='column' flexWrap='nowrap'>
       <img src={Demo_1} width='50px' height='35px' alt='demo' />
       <Demo toggleUsabilityTest = {props.toggleUsabilityTest} post_usability_test = {props.post_usability_test} />
       </Div>

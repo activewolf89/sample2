@@ -14,6 +14,7 @@ import S_Links_2 from './MainBody/S_Links_2'
 import U_Frontend from './MainBody/U_Frontend'
 import U_Frontend_2 from './MainBody/U_Frontend_2'
 import ModalContainer from './ModalContainer';
+import Footer from './MainBody/Footer';
 import {
   BrowserRouter as Router,
   Routes,
@@ -74,7 +75,12 @@ class App extends Component{
       </div>
       </div>
     </Router>
+    <Footer
+    />
+
       </body>
+
+
     </div>
   );
 }

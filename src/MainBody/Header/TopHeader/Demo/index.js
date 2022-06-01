@@ -6,9 +6,9 @@ import styled,{css} from 'styled-components';
 
 const funcC0mp = (props) =>{
   return (
-    <Div fontWeight='bold' display='flex' justifyContent='space-between'>
+    <Div fontWeight='bold' >
     <Div />
-    <Div>
+    <Div >
       <small padding='0 8px'>
       <select onChange={(e)=>{props.toggleUsabilityTest(e.target.value)}}>
       <option value={1}> V2 </option>

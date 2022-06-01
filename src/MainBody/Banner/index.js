@@ -39,14 +39,17 @@ const funcC0mp = (props) =>{
 
       <StyledDiv  width='100%'  mobile={props.WebImage[0]} desktop={props.WebImage[1]} backgroundSize='contain' backgroundPosition='center' backgroundRepeat='no-repeat'>
 
-        <FloatingDiv2  textAlign='center'>
+        <FloatingDiv2  textAlign='center' >
         {
         !props.noButton &&
           <ReWords text={props.text} small />
         }
         </FloatingDiv2>
       </StyledDiv>
+      {
+        !props.noButton &&
         <CallToAction buttonObj={props.buttonObj} text={props.text}/>
+      }
 
     </Div>
   )

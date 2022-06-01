@@ -10,8 +10,7 @@ import StyledLink from 'shared/StyledLink';
 import Banner from '../Banner'
 import Button from 'shared/Button';
 import Selection from './start_your_selection.jpg';
-import ZoomCasual from './zoom_casual.jpg';
-import Casual from './casual.jpg';
+
 import ImageRotator from '../ImageRotator'
 import FontAwesome from 'react-fontawesome'
 import BF0 from './b_f_0.jpg'
@@ -41,6 +40,14 @@ import BC2 from './bc_2.jpg'
 import BC3 from './bc_3.jpg'
 import BC4 from './bc_4.jpg'
 import BC5 from './bc_5.jpg'
+
+import SC0 from './sc_0.jpg'
+import SC1 from './sc_1.jpg'
+import SC2 from './sc_2.jpg'
+import SC3 from './sc_3.jpg'
+import SC4 from './sc_4.jpg'
+import SC5 from './sc_5.jpg'
+
 import ModalContainer from './ModalContainer'
 import P from 'shared/P';
 import Form from './Form'
@@ -98,6 +105,7 @@ class Template extends Component {
         "Casual": [[C0,C1,C2,C3,C4,C5],[BC0,BC1,BC2,BC3,BC4,BC5]],
         "Business Formal": [[BF0,BF1,BF2,BF3,BF4,BF5],[Z0,Z1,Z2,Z3,Z4,Z5]],
         "Zoom Casual": [[Z0,Z1,Z2,Z3,Z4,Z5],[BF0,BF1,BF2,BF3,BF4,BF5]],
+        "Summer Celebration": [[SC0,SC1,SC2,SC3,SC4,SC5],[C0,C1,C2,C3,C4,C5]],
       },
       eventDetails: {
         name:'',
@@ -118,17 +126,16 @@ class Template extends Component {
 
   handleGenerate = function(){
     var eventDetails_1 = {
-      name: "Vibrant Shirt Zoom Meeting",
+      name: "2022 Summer Celebration Company Event",
       show_success: false,
-      selectedStyle: "Zoom Casual",
-      selectedTheme: "Vibrant Tops",
+      selectedStyle: "Summer Celebration",
       date: "2022-07-11",
       howManyInvited: "16-30",
-      eventReminders: "We will be doing a zoom session catered to welcoming a new member, and thought it would be fun to try out a new experimental Armoire feature that caters to successful events!"
+      eventReminders: "We will be having an event at an open cocktail garden scene in downtown Seattle to kick off summer - feel free to try out this new clothing suggestion feature we are working with Armoire to see what looks best for you and your style"
     }
     this.setState({
       eventDetails: eventDetails_1,
-      loginEmail: 'reedd2@uw.edu'
+      loginEmail: 'demo_user@gmail.com'
     })
   }
   handleRefreshNumber = function(key,value){
@@ -188,34 +195,39 @@ class Template extends Component {
     <ModalContainer handleClose = {this.handleToggle} success_confirmation handleLogin={this.handleLogin} loginEmail = {this.state.loginEmail} eventDetails={this.state.eventDetails}  />
   }
       <Container fluid>
-
       <Row>
         <Col xs={12}>
+        <Div padding='10px 0 0 0'>
+
         {
           this.state.loginEmail == '' ?
         <Div  padding='10px 0'>
-        <h4> Welcome, please <span onClick={(e)=>{e.preventDefault();this.handleToggle()}}  style={{textDecoration:'underline', 'cursor':'pointer'}} >login</span> to save your changes </h4>
+        <h5>Welcome to the survey, <span onClick={(e)=>{e.preventDefault();this.handleToggle()}}  style={{textDecoration:'underline', 'cursor':'pointer'}} >Login</span> to save your changes or <span onClick={(e)=>{e.preventDefault();this.handleGenerate()}}  style={{textDecoration:'underline', 'cursor':'pointer', color:'#520844'}} >DEMO</span> </h5>
 
         </Div>:
         <Div padding='10px 0'>
         Welcome, <span style={{textDecoration:'underline', fontWeight:'bold'}}>{this.state.loginEmail}</span> - your event will be saved in the backend to track metrics.
         </Div>
       }
+      </Div>
 
       </Col>
 
       </Row>
+
+
+
         <Row>
           <Col xs={12}>
           <Form
+          refreshNumber = {this.state.refreshNumber}
+          clothPool = {this.state.clothPool}
+          handleRefreshNumber = {this.handleRefreshNumber}
             eventDetails = {this.state.eventDetails}
             handleChange = {this.handleChange}
             handleSubmit = {this.handleSubmit}
            />
         </Col>
-          <Col xs={6}>
-
-          </Col>
         </Row>
         <Row>
         <Col xs={12}>
@@ -224,97 +236,7 @@ class Template extends Component {
         </Row>
         <Div Armoire margin='10px 0 0 0' >
         <Row>
-        <Col xs={7}>
-        <Div height='580px'>
-        <Col >
-        <Div   textAlign='center'>
-          <h3 >Suggested Clothing Pool
-          </h3>
-          <Div textAlign='center'>
-          <span style={{cursor:'pointer'}} onClick={this.handleRefreshNumber} > <FontAwesome name='recycle' lg /> </span>
-          </Div>
-            <small style={{fontStyle:'italics'}}> (These suggestions will change as you enter your event details) </small>
-        </Div>
-        <Div >
 
-        <Div position='' height='50px' backgroundColor='beige' color='black'>Theme: <span style={{fontWeight:'bold'}}>{this.state.eventDetails.selectedTheme}</span>
-        </Div>
-        <Div height='340px'  backgroundSize='cover' width='100%'  Armoire>
-        <ImageRotator selectedStyle={this.state.eventDetails.selectedStyle} clothPool={this.state.clothPool} refreshNumber={this.state.refreshNumber} />
-
-        </Div>
-        </Div>
-        </Col>
-        </Div>
-        </Col>
-        <Col xs={{span:4 }} style={{backgroundColor:'beige', width:'100%' }}>
-        {
-          this.state.selectedStyle == 'Business Formal' &&
-          <Div>
-          <Div  color='black' textAlign='center'>
-          <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
-          <P>
-          <Div overflowY='scroll' height='135px'>
-          relating to or denoting a style of clothing that is less formal than traditional business wear, but is still intended to give a professional and businesslike impression.
-          "I don't wear a dark suit to work, thanks to the business casual trend"
-          </Div>
-          </P>
-          </Div>
-          <Div height='300px' backgroundImg={Selection} backgroundSize='cover' width='100%' >
-          </Div>
-          </Div>
-        }
-        {
-          this.state.eventDetails.selectedStyle == 'Casual' &&
-          <Div>
-          <Div  color='black' textAlign='center'>
-          <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
-          <P>
-          <Div overflowY='scroll' height='135px'>
-  This includes jeans, sweaters, t-shirts, sneakers, and much more. However, it usually excludes flip-flops, sweats or gym clothes, revealing clothes, stained clothes, heavily distressed or ripped items, and graphic shirts with offensive or controversial statements on them.
-          </Div>
-          </P>
-          </Div>
-          <Div height='300px' backgroundImg={Casual} backgroundSize='cover' width='100%' >
-          </Div>
-          </Div>
-        }
-        {
-          this.state.eventDetails.selectedStyle == 'Business Casual' &&
-          <Div>
-          <Div  color='black' textAlign='center'>
-          <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
-          <P>
-          <Div overflowY='scroll' height='135px'>
-          relating to or denoting a style of clothing that is less formal than traditional business wear, but is still intended to give a professional and businesslike impression.
-          "I don't wear a dark suit to work, thanks to the business casual trend"
-          </Div>
-          </P>
-          </Div>
-          <Div height='300px' backgroundImg={Selection} backgroundSize='cover' width='100%' >
-          </Div>
-          </Div>
-        }
-        {
-          this.state.eventDetails.selectedStyle == 'Zoom Casual' &&
-          <Div>
-          <Div  color='black' textAlign='center'>
-          <h3 style={{textDecoration:'underline'}}>Zoom Casual</h3>
-          <P>
-          <Div overflowY='scroll' height='135px'>
-            A collection specifically catered to Zoom events.
-          </Div>
-          </P>
-          </Div>
-          <Div height='300px' backgroundImg={ZoomCasual} backgroundSize='cover' width='100%' >
-          </Div>
-          </Div>
-
-        }
-        <Div  height='100px' display='flex' justifyContent='center' alignItems='center'>
-        <Button width='300px' onClick={this.handleGenerate}>Demo </Button>
-        </Div>
-        </Col>
         </Row>
         </Div>
         </Container>
