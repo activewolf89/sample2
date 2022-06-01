@@ -13,6 +13,8 @@ import Guarantee from './guarantee.JPG'
 import Banner from '../Banner'
 import Button from 'shared/Button';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
+import Table from 'react-bootstrap/Table'
+
 const StyledDiv =  styled(Div)`
   width: 100vw;
   height: 100vw;
@@ -69,13 +71,31 @@ class Template extends Component {
           <Col xs={12}>
           <div className="list-group-item list-group-item-action flex-column align-items-start ">
             <div className="d-flex w-100 justify-content-between">
-              <h3 className="mb-1">We are here for you!</h3>
-              <small>:)</small>
+              <h5 className="mb-1"><span style={{textDecoration:'underline', margin:'10px 0'}}>You are an event planner</span> and these are the problems that face guests and planners.</h5>
             </div>
+            <div>
+            <Table striped bordered hover>
+          <thead>
+          <tr>
+          <th>Problem</th>
+          <th>Answer</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td>Event Planners sponsored by large companies want a successful time for their guests</td>
+          <td><span style={{fontWeight:'bold'}}>Armoire Event Dress!</span> </td>
 
-            <p className="mb-1">Corporate Events can be tricky, who is wearing what, how casual should it be, and potentially what my co-workers are going to be wearing are all questions your guests could have.  What if we told you, there is a way to
-            offer business clothing tailored to your user and event to improve attendance and overall satisfaction of the event? Enter <span style={{fontWeight:'bold'}}>Armoire Dress To Impress Event Planner! </span></p>
-            <small className="text-muted">You can start answering questions now, or scroll down to see the step-by-step of value gain</small>
+          </tr>
+          <tr>
+          <td>Guests do not know what to wear at an upcoming event and want suggestions and visibility in theme trends</td>
+          <td><span style={{fontWeight:'bold'}}>Armoire Event Dress!</span> </td>
+          </tr>
+
+          </tbody>
+          </Table>
+
+            </div>
 
           </div>
           </Col>

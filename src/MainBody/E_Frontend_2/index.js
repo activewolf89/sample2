@@ -188,102 +188,7 @@ class Template extends Component {
     <ModalContainer handleClose = {this.handleToggle} success_confirmation handleLogin={this.handleLogin} loginEmail = {this.state.loginEmail} eventDetails={this.state.eventDetails}  />
   }
       <Container fluid>
-      <Div Armoire margin='10px 0 0 0' >
-      <Row>
-      <Col xs={7}>
-      <Div height='580px'>
-      <Col >
-      <Div   textAlign='center'>
-        <h3 >Suggested Clothing Pool
-        </h3>
-        <Div textAlign='center'>
-        <span style={{cursor:'pointer'}} onClick={this.handleRefreshNumber} > <FontAwesome name='recycle' lg /> </span>
-        </Div>
-          <small style={{fontStyle:'italics'}}> (These suggestions will change as you enter your event details) </small>
 
-      </Div>
-      <Div >
-
-      <Div position='' height='50px' backgroundColor='beige' color='black'>Theme: <span style={{fontWeight:'bold'}}>{this.state.eventDetails.selectedTheme}</span>
-      </Div>
-      <Div height='340px'  backgroundSize='cover' width='100%'  Armoire>
-      <ImageRotator selectedStyle={this.state.eventDetails.selectedStyle} clothPool={this.state.clothPool} refreshNumber={this.state.refreshNumber} />
-
-      </Div>
-      </Div>
-      </Col>
-      </Div>
-      </Col>
-      <Col xs={{span:4 }} style={{backgroundColor:'beige', width:'100%' }}>
-      {
-        this.state.selectedStyle == 'Business Formal' &&
-        <Div>
-        <Div  color='black' textAlign='center'>
-        <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
-        <P>
-        <Div overflowY='scroll' height='135px'>
-        relating to or denoting a style of clothing that is less formal than traditional business wear, but is still intended to give a professional and businesslike impression.
-        "I don't wear a dark suit to work, thanks to the business casual trend"
-        </Div>
-        </P>
-        </Div>
-        <Div height='300px' backgroundImg={Selection} backgroundSize='cover' width='100%' >
-        </Div>
-        </Div>
-      }
-      {
-        this.state.eventDetails.selectedStyle == 'Casual' &&
-        <Div>
-        <Div  color='black' textAlign='center'>
-        <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
-        <P>
-        <Div overflowY='scroll' height='135px'>
-This includes jeans, sweaters, t-shirts, sneakers, and much more. However, it usually excludes flip-flops, sweats or gym clothes, revealing clothes, stained clothes, heavily distressed or ripped items, and graphic shirts with offensive or controversial statements on them.
-        </Div>
-        </P>
-        </Div>
-        <Div height='300px' backgroundImg={Casual} backgroundSize='cover' width='100%' >
-        </Div>
-        </Div>
-      }
-      {
-        this.state.eventDetails.selectedStyle == 'Business Casual' &&
-        <Div>
-        <Div  color='black' textAlign='center'>
-        <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
-        <P>
-        <Div overflowY='scroll' height='135px'>
-        relating to or denoting a style of clothing that is less formal than traditional business wear, but is still intended to give a professional and businesslike impression.
-        "I don't wear a dark suit to work, thanks to the business casual trend"
-        </Div>
-        </P>
-        </Div>
-        <Div height='300px' backgroundImg={Selection} backgroundSize='cover' width='100%' >
-        </Div>
-        </Div>
-      }
-      {
-        this.state.eventDetails.selectedStyle == 'Zoom Casual' &&
-        <Div>
-        <Div  color='black' textAlign='center'>
-        <h3 style={{textDecoration:'underline'}}>Zoom Casual</h3>
-        <P>
-        <Div overflowY='scroll' height='135px'>
-          A collection specifically catered to Zoom events.
-        </Div>
-        </P>
-        </Div>
-        <Div height='300px' backgroundImg={ZoomCasual} backgroundSize='cover' width='100%' >
-        </Div>
-        </Div>
-
-      }
-      <Div  height='100px' display='flex' justifyContent='center' alignItems='center'>
-      <Button width='300px' onClick={this.handleGenerate}>Demo </Button>
-      </Div>
-      </Col>
-      </Row>
-      </Div>
       <Row>
         <Col xs={12}>
         {
@@ -298,9 +203,7 @@ This includes jeans, sweaters, t-shirts, sneakers, and much more. However, it us
       }
 
       </Col>
-        <Col xs={6}>
 
-        </Col>
       </Row>
         <Row>
           <Col xs={12}>
@@ -319,6 +222,101 @@ This includes jeans, sweaters, t-shirts, sneakers, and much more. However, it us
 
         </Col>
         </Row>
+        <Div Armoire margin='10px 0 0 0' >
+        <Row>
+        <Col xs={7}>
+        <Div height='580px'>
+        <Col >
+        <Div   textAlign='center'>
+          <h3 >Suggested Clothing Pool
+          </h3>
+          <Div textAlign='center'>
+          <span style={{cursor:'pointer'}} onClick={this.handleRefreshNumber} > <FontAwesome name='recycle' lg /> </span>
+          </Div>
+            <small style={{fontStyle:'italics'}}> (These suggestions will change as you enter your event details) </small>
+        </Div>
+        <Div >
+
+        <Div position='' height='50px' backgroundColor='beige' color='black'>Theme: <span style={{fontWeight:'bold'}}>{this.state.eventDetails.selectedTheme}</span>
+        </Div>
+        <Div height='340px'  backgroundSize='cover' width='100%'  Armoire>
+        <ImageRotator selectedStyle={this.state.eventDetails.selectedStyle} clothPool={this.state.clothPool} refreshNumber={this.state.refreshNumber} />
+
+        </Div>
+        </Div>
+        </Col>
+        </Div>
+        </Col>
+        <Col xs={{span:4 }} style={{backgroundColor:'beige', width:'100%' }}>
+        {
+          this.state.selectedStyle == 'Business Formal' &&
+          <Div>
+          <Div  color='black' textAlign='center'>
+          <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
+          <P>
+          <Div overflowY='scroll' height='135px'>
+          relating to or denoting a style of clothing that is less formal than traditional business wear, but is still intended to give a professional and businesslike impression.
+          "I don't wear a dark suit to work, thanks to the business casual trend"
+          </Div>
+          </P>
+          </Div>
+          <Div height='300px' backgroundImg={Selection} backgroundSize='cover' width='100%' >
+          </Div>
+          </Div>
+        }
+        {
+          this.state.eventDetails.selectedStyle == 'Casual' &&
+          <Div>
+          <Div  color='black' textAlign='center'>
+          <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
+          <P>
+          <Div overflowY='scroll' height='135px'>
+  This includes jeans, sweaters, t-shirts, sneakers, and much more. However, it usually excludes flip-flops, sweats or gym clothes, revealing clothes, stained clothes, heavily distressed or ripped items, and graphic shirts with offensive or controversial statements on them.
+          </Div>
+          </P>
+          </Div>
+          <Div height='300px' backgroundImg={Casual} backgroundSize='cover' width='100%' >
+          </Div>
+          </Div>
+        }
+        {
+          this.state.eventDetails.selectedStyle == 'Business Casual' &&
+          <Div>
+          <Div  color='black' textAlign='center'>
+          <h3 style={{textDecoration:'underline'}}>Business Casual</h3>
+          <P>
+          <Div overflowY='scroll' height='135px'>
+          relating to or denoting a style of clothing that is less formal than traditional business wear, but is still intended to give a professional and businesslike impression.
+          "I don't wear a dark suit to work, thanks to the business casual trend"
+          </Div>
+          </P>
+          </Div>
+          <Div height='300px' backgroundImg={Selection} backgroundSize='cover' width='100%' >
+          </Div>
+          </Div>
+        }
+        {
+          this.state.eventDetails.selectedStyle == 'Zoom Casual' &&
+          <Div>
+          <Div  color='black' textAlign='center'>
+          <h3 style={{textDecoration:'underline'}}>Zoom Casual</h3>
+          <P>
+          <Div overflowY='scroll' height='135px'>
+            A collection specifically catered to Zoom events.
+          </Div>
+          </P>
+          </Div>
+          <Div height='300px' backgroundImg={ZoomCasual} backgroundSize='cover' width='100%' >
+          </Div>
+          </Div>
+
+        }
+        <Div  height='100px' display='flex' justifyContent='center' alignItems='center'>
+        <Button width='300px' onClick={this.handleGenerate}>Demo </Button>
+        </Div>
+        </Col>
+        </Row>
+        </Div>
         </Container>
         </Div>
 

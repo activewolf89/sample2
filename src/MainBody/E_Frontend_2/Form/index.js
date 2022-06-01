@@ -89,7 +89,7 @@ const FunctionalComponent = (props) =>{
       <div class="d-flex w-100 justify-content-between">
       <Form.Label>4) Event Reminders For Recipients</Form.Label>
       </div>
-        <textarea onChange={(e)=>{props.handleChange('eventReminders',e.target.value)}} value={props.eventDetails.eventReminders} style={{width:'500px',height:'500px', border:'2px solid gray'}} placeholder="This will be generated on the quick copy for your recipients" />
+        <textarea onChange={(e)=>{props.handleChange('eventReminders',e.target.value)}} value={props.eventDetails.eventReminders} style={{width:'100%',height:'500px', border:'2px solid gray'}} placeholder="This will be generated on the quick copy for your recipients" />
 
       </div>
       </Col>
@@ -97,7 +97,7 @@ const FunctionalComponent = (props) =>{
       <Row>
         <Col xs={{span:12}} >
         <Div  padding='10px' >
-        <Button Armoire color='white' padding='10px' width='510px' onClick={(e) =>{e.preventDefault();props.handleSubmit()}}>
+        <Button Armoire color='white' padding='10px' width='100%' onClick={(e) =>{e.preventDefault();props.handleSubmit()}}>
         Start Your Event
         </Button>
         </Div>

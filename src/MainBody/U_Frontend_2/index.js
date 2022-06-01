@@ -60,7 +60,8 @@ const MasterGrid = styled(Div)`
 `
 class Template extends Component {
   render(){
-    var date1 = new Date('2022-07-11');
+    var date1 = new Date();
+    date1.setDate(date1.getDate() + 30);
     return (
       <Container fluid>
         <Row>
@@ -70,7 +71,7 @@ class Template extends Component {
         </Row>
         <Row>
         <Col xs={12}>
-        <Div display='flex' justifyContent='center' fontWeight='bold' Armoire> Your Event is |
+        <Div display='flex' justifyContent='center' fontWeight='bold' backgroundColor='green' color='white'> Your Event is |
         <Div padding='0 20px' >
         <Countdown date={date1} />
         </Div>

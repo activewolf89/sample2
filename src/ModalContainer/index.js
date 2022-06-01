@@ -25,19 +25,22 @@ const FunctionalComponent = (props) =>{
         <Div>
         <h4>User Page Updates</h4>
         <Ul>
+        <Li>Less wordy and more flow-oriented</Li>
         <Li>Add price for images</Li>
         <Li>Sign up or guest option at check out modal</Li>
         <Li>Display Option of what other people have picked</Li>
-        <Li> Setup Post-event Survey</Li>
+        <Li>Enter Event Code on landing page to see details</Li>
+        <Li>Replace recycling with left and right arrows</Li>
         </Ul>
         </Div>
         <Div>
         <h4>Event Page Updates</h4>
         <Ul>
-        <Li>Add price for images</Li>
-        <Li>Sign up or guest option at check out modal</Li>
-        <Li>Display Option of what other people have picked</Li>
-        <Li> Setup Post-event Survey</Li>
+        <Li>Less wordy and more flow-oriented</Li>
+        <Li>Add current most popular choice so far</Li>
+        <Li>Swap the top suggested clothing pool section with the survey and describe what the below pool will do</Li>
+        <Li>Replace recycling with left and right arrows</Li>
+        <Li>Change the prototype with summer cocktail party</Li>
         </Ul>
         </Div>
       </Modal.Body>
