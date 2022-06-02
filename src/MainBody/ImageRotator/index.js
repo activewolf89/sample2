@@ -13,10 +13,7 @@ width:100px;
 height: 170px;
 width:170px;
 }
-@media only screen and (min-width: 996px) {
-height: 270px;
-width:270px;
-}
+border: 2px solid #520844;
 `
 const FunctionalComponent = (props) =>{
 

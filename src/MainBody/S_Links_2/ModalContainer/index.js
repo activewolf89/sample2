@@ -12,8 +12,11 @@ import P from 'shared/P';
 import Wireframes from './wireframes.pdf'
 import EmailConfirmation from './email_receipt_final.pdf'
 import EmailConfirmationRecipient from './for_sure.pdf'
+import { Document, Page } from 'react-pdf';
+import PDFRead from './PDFRead';
 
 const FunctionalComponent = (props) =>{
+  console.log(props)
 
   return (
     <div>
@@ -23,20 +26,14 @@ const FunctionalComponent = (props) =>{
       </Modal.Header>
       <Modal.Body>
       {
-    props.whichModal == 'wireframe' &&
-    <embed src={Wireframes} frameborder="0" width="100%" height="400px" />
-    }
-    {
-
-
-      props.whichModal == 'recipient_email' &&
-      <embed src={EmailConfirmationRecipient} frameborder="0" width="100%" height="400px" />
-
-    }
-    {
-      props.whichModal =='event_email' &&
-      <embed src={EmailConfirmation} frameborder="0" width="100%" height="400px" />
-    }
+        props.whichModal == 'event_email' ?
+        <PDFRead fileToShow = {EmailConfirmation} />:
+        props.whichModal == 'recipient_email' ?
+        <PDFRead fileToShow = {EmailConfirmationRecipient} />:
+        props.whichModal == 'wireframe' ?
+        <PDFRead fileToShow = {Wireframes} />:
+        <PDFRead fileToShow = {Wireframes} />
+      }
       </Modal.Body>
       <Modal.Footer>
 
