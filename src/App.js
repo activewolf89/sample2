@@ -11,6 +11,7 @@ import E_Backend from './MainBody/E_Backend'
 import E_Backend_2 from './MainBody/E_Backend_2'
 import S_Links from './MainBody/S_Links'
 import S_Links_2 from './MainBody/S_Links_2'
+import BonusLink from './MainBody/BonusLink'
 import U_Frontend from './MainBody/U_Frontend'
 import U_Frontend_2 from './MainBody/U_Frontend_2'
 import ModalContainer from './ModalContainer';
@@ -70,6 +71,7 @@ class App extends Component{
       <Route path="/event-planner-back-end" element = {this.state.post_usability_test == 1 ? <E_Backend_2 />:<E_Backend />} />
       <Route path="/user-front-end" element = {this.state.post_usability_test == 1 ? <U_Frontend_2 />:<U_Frontend />} />
       <Route path="/snapshot-links" element = {this.state.post_usability_test == 1 ? <S_Links_2 />:<S_Links />} />
+      <Route path="/bonus-link" element = {this.state.post_usability_test == 1 ? <BonusLink />:<BonusLink />} />
       </Routes>
       </div>
       </div>
