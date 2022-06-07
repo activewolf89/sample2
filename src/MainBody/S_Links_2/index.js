@@ -106,10 +106,31 @@ class Template extends Component {
   <tr>
   <td>5</td>
     <td>StoryBoard</td>
-    <td><a href='https://uwnetid-my.sharepoint.com/:f:/r/personal/janstan_uw_edu/Documents/Armoire/Armoire%20Style%20Project%20-%20Purple%20Team%201?csf=1&web=1&e=5Ra6fv' target="_blank">Presentation Slides</a></td>
+    <td><a href='https://uwnetid-my.sharepoint.com/:p:/g/personal/janstan_uw_edu/Ed1qdTwrJKhPjODxJmEFyvUB4_vsOVE3QsFmoo15gqt8EA?e=4%3A6cM5Eb&at=9' target="_blank">Presentation Slides</a></td>
   </tr>
   <tr>
   <td>6</td>
+    <td>Post-Event Planner Survey</td>
+    <td><a href='https://docs.google.com/forms/d/e/1FAIpQLScXGXW_EDgtdGarPORZ00MwSnZymgGXEojK9wSg1vxgayyc1w/viewform?usp=sf_link' target="_blank">Post Event Planner Survey</a></td>
+  </tr>
+  <tr>
+  <td>7</td>
+    <td>Post-Guest Survey</td>
+    <td><a href='https://www.surveymonkey.com/r/MPGB8H6' target="_blank">Post Guest Survey</a></td>
+  </tr>
+  <tr>
+  <td>8</td>
+    <td>Product Requirement Document</td>
+    <td><a href='https://docs.google.com/document/d/1398uPN_BImCyOpOGFYsMZtiKNtCIsc-TeJ7wY4sEzzQ/edit' target="_blank">Link</a></td>
+  </tr>
+  <tr>
+  <td>9</td>
+    <td>Youtube Video</td>
+    <td><a href='https://www.youtube.com/watch?v=-lrDB3AITMU&ab_channel=YoungdongKIM' target="_blank">Link</a></td>
+
+  </tr>
+  <tr>
+  <td>10</td>
     <td>Bonus Link</td>
     <td><StyledLink to='/bonus-link'>Mens Page</StyledLink></td>
   </tr>
